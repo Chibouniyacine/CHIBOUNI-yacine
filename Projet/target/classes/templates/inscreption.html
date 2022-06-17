@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="stylesheet" href="style1.css" media="screen" type="text/css" />
+    <title>Inscreption</title>
+</head>
+
+<body>
+<section class="inscreption">
+    <h1>Inscription</h1>
+
+    <div id="container">
+
+         <form th:action="@{/inscreption/save}" method="post" th:object="${user}">
+                   <h2>creer un compte sur Trader</h2>
+
+                  <label> <b>name </b></label>
+                  <div><input type="text" th:field="*{name}"/></div>
+
+                  <div><label> <b>password</b> </label></div>
+                  <div><input  type="password" th:field="*{password}"/></div>
+
+                  <div><label> <b>email</b> </label></div>
+                  <div><input  type="email" th:field="*{email}"/></div>
+
+                  <div><button type="submit" >save</button></div>
+
+         </form>
+    </div>
+    <h1>Login</h1>
+        <div> <h2 >avez un compte deja</h2></b></div>
+        <form th:action="@{/inscreption/save1}" method="post" th:object="${user}">
+
+                   <div><label><b> email </b></label></div>
+                   <div> <input  type="email" th:field="*{email}"/></div>
+
+                   <div><label> <b>password </b></label>  </div>
+                   <div><input  type="password" th:field="*{password}"/>
+
+                  </div><div><button type="submit" >login</button></div>
+        </form>
+    </section>
+</body>
+
+</html>

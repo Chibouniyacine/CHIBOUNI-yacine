@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Contact</title>
+</head>
+<header>
+    <a th:href="@{/index}" class="logo"><span>T</span>rader</a>
+</header>
+<section class="contact" id="contact">
+    <div class="titre noir">
+        <h2 class="titre-text"><span>C</span>ontact</h2>
+        <p> Avez-vous trouvé ces avis utile ? </p>
+    </div>
+    <div class="contactform">
+        <h3>Envoyer un message</h3>
+        <div class="inputboite">
+            <input type="text" placeholder="Nom">
+        </div>
+        <div class="inputboite">
+            <input type="text" placeholder="email">
+        </div>
+        <div class="inputboite">
+            <textarea placeholder="message"></textarea>
+        </div>
+        <div class="inputboite">
+            <input type="submit" value="envoyer">
+        </div>
+    </div>
+    <script src="trader.js"></script>
+</section>
+</html>

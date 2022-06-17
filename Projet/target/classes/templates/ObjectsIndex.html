@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Objects</title>
+</head>
+<body>
+
+<h1>Livre disponibles pour échange sur le site Trader</h1>
+
+<tbody>
+
+<th:block th:each="user : ${listUsers}">
+    <br>
+    <td>  <img  th:src="@{${'/images/' + user.photo }}"></td>
+
+
+</th:block>
+
+<h3>inscrevez vous pour pouvoir faire l'echange !!!! <a th:href="@{/ObjectsIndex/inscreption}"> Inscreption</a></h3>
+<br>
+<a th:href="@{/ObjectsIndex/acceuil}"> Retour a l'acceuil</a>
+
+
+</body>
+</html>

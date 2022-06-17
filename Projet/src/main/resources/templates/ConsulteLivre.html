@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>ConsulteLivre</title>
+</head>
+<body>
+
+<div><h2>Consulter un livre sur Trader</h2></div>
+<form th:action="@{/ConsulteLivre/livre}" method="post" th:object="${user}">
+    <div><label> Entrer l email de l'utilisateur SVP</label></div>
+    <div><input  type="email" th:field="*{email}"/></div>
+    <div><button type="submit" >Consulter son livre</button></div>
+</form>
+<div> <a th:href="@{/ConsulteLivre/retour}" > Retour</a></div>
+
+
+</body>
+</html>

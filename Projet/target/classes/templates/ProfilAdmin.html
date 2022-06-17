@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Admin</title>
+</head>
+<body>
+<section class="menu">
+    <h1>Bonjour  Admin </h1>
+    <h2>[[${user.name}]]</h2>
+    <div>
+        <h2>Suprimer un compte</h2>
+        <h4>Pour supprimer un compte client veuillez entrer son email </h4>
+        <form th:action="@{/ProfilAdmin/sup}" method="post" th:object="${user}">
+            <div><input  type="email" th:field="*{email}"/></div>
+            <div><button type="submit" >Supprime un client</button></div>
+        </form>
+    </div>
+
+    <div>
+        <h2>Envoyer un Email</h2>
+        <h4>Pour envoyer un email a un client veuillez entrer son email et le message SVP</h4>
+        <form  th:action="@{/Profil_Admin/newmail}"  method="post" th:object="${mail}" >
+            <div><label> email </label></div>
+            <div><input type="text" th:field="*{email}"/></div>
+            <div><label> Votre message </label></div>
+            <div><input type="text" th:field="*{message}"/></div>
+            <button type="submit" >Envoyer message</button>
+        </form>
+
+        <div> <a th:href="@{/Profil_Admin/exit}" > Deconnexion</a></div>
+    </div>
+</section>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en"xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src="trader.js"></script>
+    <title>Trader</title>
+</head>
+        <header>
+            <a href="#" class="logo"><span>T</span>rader</a>
+        <ul class="navbar">
+            <a th:href="@{/index/apropos}"> A propos</a>
+            <a th:href="@{/index/inscreption}"> Inscription</a>
+            <a th:href="@{/index/contact}"> Contactez nous</a>
+            <a th:href="@{/index/Objects}"> Objects</a>
+        </ul>
+        </header>
+<body>
+<section class="banniere" id="banniere">
+    <div class="contenu">
+        <h2>Bienvenue Dans L'espace "échange d'objets" </h2>
+        <p>Echange Service est une plate-forme de mise en relation qui vise à favoriser l'échange et le service. Publiez des annonces !
+            Vendre, acheter, échanger vos biens et vos services sans commission avec les membres de la communauté !.</p>
+    </div>
+</section>
+</body>
+</html>

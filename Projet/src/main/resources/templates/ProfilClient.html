@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel = "preconnect" href = "https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <title>Client</title>
+</head>
+<body>
+<h1>Bonjour Client </h1>
+
+<div>
+
+    <h3>voulez vous ajouter un objet ? </h3>
+
+</div>
+  <form th:action="@{/ProfilClient/ajout}" method="post" th:object="${user}">
+    <label>Nom </label>
+    <input type="text" th:field="*{nomLivre}"/>
+    <label >Photo</label>
+    <input type="file" th:field="*{photo}"/>
+    <div><button type="submit" >ajouter un livre</button> </div>
+  </form>
+
+<h3>voir les livres disponibles pour faire echange  !!!! <a th:href="@{/ProfilClient/voir}"> Livres disponibles</a></h3>
+<h3>voir le livre d'un utilisteur particulier            <a th:href="@{/ProfilClient/voirClient}"> Livre echange</a></h3>
+
+<div> <a th:href="@{/ProfilClient/exit}" > Deconnexion</a></div>
+</body>
+</html>
